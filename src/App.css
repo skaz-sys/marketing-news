@@ -1,0 +1,284 @@
+
+/* WHOLE PAGE */
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+
+/* HEADER */
+
+.header {
+  background: white;
+  height: 65px;
+  width: 100%;
+}
+
+.header-inner {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #bdbdbd;
+}
+
+/* NAVIGATION */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 12px;
+}
+
+.login-btn {
+  background: white;
+  border: 1px solid #999;
+  padding: 7px 18px;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+}
+
+/* GREY HERO */
+
+.hero {
+  width: 100%;
+  background: #c6c6c6;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 55px 40px;
+}
+
+.hero-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(32px, 4.5vw, 55px);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+/* SMALL HERO IMAGE */
+
+.hero-image {
+  width: 290px;
+  height: 190px;
+  max-width: 100%;
+  object-fit: cover;
+  justify-self: center;
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+  display: flex;
+  width: 60%;
+  max-width: 650px;
+  height: 55px;
+  margin: 35px auto 0;
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  background: white;
+  border: none;
+  padding: 12px;
+}
+
+.search-bar button {
+  width: 140px;
+  border: none;
+  background: #4e4949;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* NEWS CARDS */
+
+.cards-section {
+  background: white;
+}
+
+.cards-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 55px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+}
+
+.card {
+  background: #e5e5e5;
+  overflow: hidden;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-text {
+  background: #c4c4c4;
+  padding: 12px;
+}
+
+.card-text h3 {
+  font-size: 17px;
+  color: #111;
+  margin: 0 0 4px;
+  font-weight: bold;
+}
+
+.card-text p {
+  font-size: 13px;
+  color: #444;
+  margin: 0;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .header {
+    height: 60px;
+  }
+
+  .header-inner {
+    padding: 0 15px;
+    position: relative;
+  }
+
+  .logo-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* HAMBURGER MENU */
+
+  .burger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    z-index: 10;
+  }
+
+  .nav-open {
+    display: flex;
+  }
+
+  /* HERO ON MOBILE */
+
+  .hero-inner {
+    padding: 35px 20px 30px;
+  }
+
+  .hero-top {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  /* MOBILE SEARCH */
+
+  .search-bar {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-bar input {
+    width: 100%;
+    flex: none;
+    height: 55px;
+  }
+
+  .search-bar button {
+    width: 100%;
+    height: 55px;
+    font-size: 13px;
+  }
+
+  /* MOBILE CARDS */
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    padding: 35px 22px;
+    gap: 30px;
+  }
+
+  .card-image {
+    height: 230px;
+  }
+
+}
